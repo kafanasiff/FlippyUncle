@@ -1,0 +1,88 @@
+Screenshot Creator Update History
+=================================
+
+v1.4.2
+------
+
+* Patch release for Unity 5.3.0 fixing deprecated Unity API calls
+
+v1.4.1
+------
+
+* Fixed error when adding first resolution to resolutions list
+* Added display of aspect ratio within resolutions list & preview title bar
+
+Mac on Unity 5 Only
+
+* Fixed a crash on screenshot window opening [upstream ReorderableList update]
+
+v1.4
+----
+
+* Automatic Camera detection and setup in addition to Manual Camera arrangement
+* Individual screenshot resolutions can be activated/deactivated
+* [BUG] Camera selection no longer alters actual camera active/inactive state within a scene
+* Screenshot Manager (Runtime Class) allows for scale setting and uses new automatic camera detection
+
+v1.3
+----
+
+* Basic runtime screenshot manager (to be extended)
+* Simple example scene using screenshot manager and keypress screenshots
+* [BUG] Applied same fix for anti-aliasing for all screenshot types
+* Added a bool to ScreenshotUtility indicating if screenshot is in progress
+* Added optional GameObject container to Editor for objects only to be displayed in screenshots (eg text)
+
+v1.2.3
+------
+
+* Added support for anti-aliasing as set within Quality Settings
+* Added the ability to load PlayerPrefs screen resolutions into resolutions list
+* Added icon to Screenshot Creator window.
+
+v1.2.2
+------
+
+* Fix a (possible) memory leak during preview rendering
+* Preview area is now drag-resizable
+
+v1.2.1
+------
+
+* Fixed camera sound issue when target build environment did not support Ogg Vorbis
+* Correct size of overlay images in preview window to correctly represent final screenshot
+* Fix an issue with Screenshot Creator window flickering in the linear colourspace
+
+v1.2
+----
+
+* Multi-Camera support. This is experimental.
+  - Please if you find any issues email me and screenshot-creator@darkarts.co.za
+* The beginnings of the scriptable API (documentation to follow)
+* Fixed a bug where screenshots didn't save when odd characters (eg semi-colon)
+  existed in Game, Scene or Camera names
+* Lighting mode toggleable now within preview window and screenshots. This behaves
+  in the same manner as the scene view's lighting toggle.
+
+Unity Pro Only
+* Realtime (in-game) Screenshots, with API to go with it
+  - In the next release a Screenshot Management component/gameobject will join to
+    help manage this.
+    
+
+v1.1
+----
+
+* User Interface Improvements (mostly cleaned up wasted space)
+* Snapshot sound when taking a screenshot
+* Multiple simultaneous screenshots at different resolutions
+* Fixed several bugs and optimized performance
+  - Part of this change means realtime preview is limited to 10 FPS
+* Fixed a crash where it attempted to index selected camera when
+  no camera was selected
+
+v1.0
+----
+
+* Initial Release
+
