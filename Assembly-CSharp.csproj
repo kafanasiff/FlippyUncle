@@ -52,7 +52,6 @@
      <Compile Include="Assets\Chartboost\Scripts\CBJSON.cs" />
      <Compile Include="Assets\Chartboost\Scripts\CBSettings.cs" />
      <Compile Include="Assets\Chartboost\Scripts\Chartboost.cs" />
-     <Compile Include="Assets\DarkArts Studios\Screenshot Creator\Examples\Pro Only\Key press screenshots\Scripts\ScreenshotOnKeyPress.cs" />
      <Compile Include="Assets\FlippyUncle\GPGSIds.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\Achievement.cs" />
      <Compile Include="Assets\GooglePlayGames\BasicApi\CommonStatusCodes.cs" />
@@ -260,7 +259,6 @@
      <Compile Include="Assets\Scripts\Title.cs" />
      <Compile Include="Assets\Scripts\WelcomeText.cs" />
      <None Include="Assets\Plugins\Android\ChartboostSDK\AndroidManifest.xml" />
-     <None Include="Assets\DarkArts Studios\Screenshot Creator\changes.txt" />
      <None Include="Assets\GooglePlayGames\Editor\template-GameInfo.txt" />
      <None Include="Assets\GooglePlayGames\Editor\template-AndroidManifest.txt" />
      <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver.txt" />
@@ -289,9 +287,6 @@
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>D:/Program Files/Unity5.6.1/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
- </Reference>
- <Reference Include="DarkArtsStudios.ScreenshotCreator.Runtime">
- <HintPath>D:/GameDev/Games and App Development/UnityGameProjects/FlippyUncle/Assets/DarkArts Studios/Screenshot Creator/DarkArtsStudios.ScreenshotCreator.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>D:/Program Files/Unity5.6.1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
