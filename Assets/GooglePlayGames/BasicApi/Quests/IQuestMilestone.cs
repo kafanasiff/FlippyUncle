@@ -13,10 +13,11 @@
 //  See the License for the specific language governing permissions and
 //    limitations under the License.
 // </copyright>
-#if (UNITY_ANDROID || (UNITY_IPHONE && !NO_GPGS))
 
 namespace GooglePlayGames.BasicApi.Quests
 {
+    using System;
+
     public enum MilestoneState
     {
         NotStarted = 1,
@@ -31,6 +32,7 @@ namespace GooglePlayGames.BasicApi.Quests
     /// <para>See online <a href="https://developers.google.com/games/services/common/concepts/quests">
     /// documentation for Quests and Events</a> for more information.</para>
     /// </summary>
+    [Obsolete("Quests are being removed in 2018.")]
     public interface IQuestMilestone
     {
         /// <summary>
@@ -94,4 +96,3 @@ namespace GooglePlayGames.BasicApi.Quests
         }
     }
 }
-#endif

@@ -18,7 +18,7 @@
         <meta-data android:name="com.google.android.gms.games.APP_ID"
             android:value="\ 256620820677" />
         <meta-data android:name="com.google.android.gms.games.unityVersion"
-            android:value="\ 0.9.33" />
+            android:value="\ 0.9.39a" />
         <meta-data android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 

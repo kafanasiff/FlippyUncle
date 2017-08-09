@@ -1,0 +1,10 @@
+lastUpgrade=00939
+proj.AppId=256620820677
+proj.ConstantsClassName=FlippyUncle.GPGSIds
+and.ResourceData=%3c%3fxml+version%3d%221.0%22+encoding%3d%22utf-8%22%3f%3e%0d%0a%3c%21--%0d%0aGoogle+Play+game+services+IDs.%0d%0aSave+this+file+as+res%2fvalues%2fgames-ids.xml+in+your+project.%0d%0a--%3e%0d%0a%3cresources%3e%0d%0a++%3cstring+name%3d%22app_id%22%3e256620820677%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22package_name%22%3ecom.AnachronicDesigns.FlippyUncle%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_box_collector%22%3eCgkIxfGr_rsHEAIQAQ%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_super_box_collector%22%3eCgkIxfGr_rsHEAIQAw%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_super_duper_box_collector%22%3eCgkIxfGr_rsHEAIQBA%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_ultra_box_collector%22%3eCgkIxfGr_rsHEAIQBQ%3c%2fstring%3e%0d%0a++%3cstring+name%3d%22achievement_omega_box_collector%22%3eCgkIxfGr_rsHEAIQBg%3c%2fstring%3e%0d%0a%3c%2fresources%3e
+and.ClientId=
+android.SetupDone=true
+proj.pluginVersion=0.9.39a
+and.BundleId=com.AnachronicDesigns.FlippyUncle
+proj.classDir=Assets
+proj.requireGPlus=false

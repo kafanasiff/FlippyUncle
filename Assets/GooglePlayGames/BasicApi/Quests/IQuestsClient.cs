@@ -13,7 +13,6 @@
 //  See the License for the specific language governing permissions and
 //    limitations under the License.
 // </copyright>
-#if (UNITY_ANDROID || (UNITY_IPHONE && !NO_GPGS))
 
 namespace GooglePlayGames.BasicApi.Quests
 {
@@ -89,6 +88,7 @@ namespace GooglePlayGames.BasicApi.Quests
     ///
     /// All callbacks in this interface must be invoked on the game thread.
     /// </summary>
+    [Obsolete("Quests are being removed in 2018.")]
     public interface IQuestsClient
     {
         /// <summary>
@@ -160,4 +160,3 @@ namespace GooglePlayGames.BasicApi.Quests
                             Action<QuestClaimMilestoneStatus, IQuest, IQuestMilestone> callback);
     }
 }
-#endif

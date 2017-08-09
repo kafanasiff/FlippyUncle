@@ -1,14 +1,17 @@
-﻿using UnityEngine;
+﻿// Project:			Flippy Uncle by Anachronic Designs
+// Coder(s):		Kevin Afanasiff
+// Last Updated:	Dec. 9th, 2016
+
+/*
+ * This script controls posting content to social media networks 
+ * (Twitter, Facebook, GooglePlus, Reddit, LinkedIn),
+ * and accessing social media sites for the game.
+ * */
+
+using UnityEngine;
 using System.Collections;
 
 public static class SocialMediaManager {
-
-	private const string TWITTER_ADDRESS = "http://twitter.com/intent/tweet";
-	private const string TWEET_LANGUAGE = "en";
-
-	private const string FACEBOOK_APP_ID = "865513516904725";
-	private const string FACEBOOK_URL = "http://www.facebook.com/dialog/feed";
-
 
 	static public void OpenTwitterPage () {
 		Application.OpenURL ("https://twitter.com/flippyuncle");
@@ -20,9 +23,10 @@ public static class SocialMediaManager {
 
 	static public void ShareToTwitter () {
 		string tweetText = "I'm playing #FlippyUncle! Check it out: www.flippyuncle.com";
-		Application.OpenURL (TWITTER_ADDRESS + "?text=" + WWW.EscapeURL (tweetText) + "&amp;lang=" + WWW.EscapeURL (TWEET_LANGUAGE) + "&amp;via=" + WWW.EscapeURL("FlippyUncle") + "&amp;hashtags=" + WWW.EscapeURL("gaming, mobilegaming"));
+		Application.OpenURL ("http://twitter.com/intent/tweet" + "?text=" + WWW.EscapeURL (tweetText) 
+			+ "&amp;lang=" + WWW.EscapeURL ("en") + "&amp;via=" + WWW.EscapeURL("FlippyUncle") 
+			+ "&amp;hashtags=" + WWW.EscapeURL("gaming, mobilegaming"));
 	}
-
 
 	static public void ShareToFacebook () {
 		string facebookshare = "https://www.facebook.com/sharer/sharer.php?u=" + WWW.EscapeURL("http://www.flippyuncle.com");

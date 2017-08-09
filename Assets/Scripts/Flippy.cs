@@ -175,7 +175,19 @@ public class Flippy : MonoBehaviour {
 				#endif
 				
 				#if UNITY_EDITOR || UNITY_WEBPLAYER || UNITY_STANDALONE || UNITY_WEBGL
-				if (Input.GetMouseButtonUp (0)) {
+				
+                // New method (left button flips left; right button flips right)
+                float flipForce = 75f;
+                float flipRotation = 45f;
+                if (Input.GetMouseButtonUp(0)) {
+                    Flip(-flipForce,-flipRotation);
+                }
+                else if (Input.GetMouseButtonUp(1)) {
+                    Flip(flipForce,flipRotation);
+                }
+                // Old method; works just like location-dependent tap on mobile
+                /*
+                if (Input.GetMouseButtonUp (0)) {
 					ray = flippyCamera.ScreenPointToRay (Input.mousePosition);
 					if (Physics.Raycast (ray, out hit)) {
 						if (hit.transform.gameObject.name == "FullScreenCollider") {
@@ -189,6 +201,7 @@ public class Flippy : MonoBehaviour {
 						}
 					}
 				}
+                */            
 				#endif
 			}
 		}
@@ -388,7 +401,7 @@ public class Flippy : MonoBehaviour {
 	void Flip(float xForce, float yRotation) {
 		//rigidbody.velocity = new Vector3 (rigidbody.velocity.x, 0, 0);
 		GetComponent<Rigidbody>().AddForce (new Vector3 (xForce, yForce, 0));
-		GetComponent<Rigidbody>().AddTorque(new Vector3 (0,0,yRotation));
+		GetComponent<Rigidbody>().AddTorque(new Vector3 (0, 0, yRotation));
 	}
 
 	void OnTriggerEnter(Collider hit) {

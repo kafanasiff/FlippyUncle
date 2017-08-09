@@ -53,7 +53,25 @@ namespace GooglePlayGames
         /// Authenticates the local user. Equivalent to calling
         /// <see cref="PlayGamesPlatform.Authenticate" />.
         /// </summary>
+        public void Authenticate(Action<bool, string> callback)
+        {
+            mPlatform.Authenticate(callback);
+        }
+
+        /// <summary>
+        /// Authenticates the local user. Equivalent to calling
+        /// <see cref="PlayGamesPlatform.Authenticate" />.
+        /// </summary>
         public void Authenticate(Action<bool> callback, bool silent)
+        {
+            mPlatform.Authenticate(callback, silent);
+        }
+
+        /// <summary>
+        /// Authenticates the local user. Equivalent to calling
+        /// <see cref="PlayGamesPlatform.Authenticate" />.
+        /// </summary>
+        public void Authenticate(Action<bool, string> callback, bool silent)
         {
             mPlatform.Authenticate(callback, silent);
         }
@@ -79,17 +97,10 @@ namespace GooglePlayGames
 
         /// <summary>
         /// Gets an id token for the user.
-        /// NOTE: This property can only be accessed using the main Unity thread.
         /// </summary>
-        /// <param name="idTokenCallback"> A callback to be invoked after token is retrieved. Will be passed null value
-        /// on failure. </param>
-        [Obsolete("Use PlayGamesPlatform.GetServerAuthCode()")]
-        public void GetIdToken(Action<string> idTokenCallback)
+        public string GetIdToken()
         {
-            if(authenticated)
-                mPlatform.GetIdToken(idTokenCallback);
-            else
-                idTokenCallback(null);
+            return mPlatform.GetIdToken();
         }
 
         /// <summary>
@@ -168,21 +179,6 @@ namespace GooglePlayGames
             }
         }
 
-        /// <summary>
-        /// Gets an access token for the user.
-        /// NOTE: This property can only be accessed using the main Unity thread.
-        /// </summary>
-        /// <returns>
-        /// An id token for the user.
-        /// </returns>
-        [Obsolete("Use PlayGamesPlatform.GetServerAuthCode()")]
-        public string accessToken
-        {
-            get
-            {
-                return authenticated ? mPlatform.GetAccessToken() : string.Empty;
-            }
-        }
 
         /// <summary>
         /// Returns true (since this is the local user).
@@ -260,10 +256,10 @@ namespace GooglePlayGames
             if (mStats == null || !mStats.Valid)
             {
                 mPlatform.GetPlayerStats((rc, stats) =>
-                    {
-                        mStats = stats;
-                        callback(rc, stats);
-                    });
+                {
+                    mStats = stats;
+                    callback(rc, stats);
+                });
             }
             else
             {

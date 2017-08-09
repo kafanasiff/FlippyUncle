@@ -27,15 +27,23 @@ namespace GooglePlayGames
 
     public const string VersionKeyJarResolver = "00928";
     public const string VersionKeyNativeCRM = "00930";
-    public const int VersionInt = 0x0933;
-    public const string VersionString = "0.9.33";
-    public const string VersionKey = "00933";
 
-    // used to check for the correct min version or play services.
-    public const int MinGmsCoreVersionCode = 8487000;
+    // Using JNI to get spendprobability - so don't delete the Games.cs files.
+    public const string VersionKeyJNIStats = "00934";
+
+    // New and improved jar resolver
+    public const string VersionKeyJarResolverDLL = "00935";
+
+    // Current Version.
+    public const int VersionInt = 0x0939a;
+    public const string VersionString = "0.9.39a";
+    public const string VersionKey = "00939";
+
+    // used to check for the correct min version or play services: 10.2
+    public const int MinGmsCoreVersionCode = 10200000;
 
     // used to get the right version of dependencies.
-    public const string PlayServicesVersionConstraint = "8.4+";
+    public const string PlayServicesVersionConstraint = "10+";
   }
 }
 #endif
